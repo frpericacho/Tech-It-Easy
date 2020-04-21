@@ -10,7 +10,6 @@ class User extends Migration
             'id' => [
                 'type' => 'INT',
                 'constraint' => 9,
-                'unsigned' => true,
                 'auto_increment' => true,
             ],
             'name' => [
