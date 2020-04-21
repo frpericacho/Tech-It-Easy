@@ -15,18 +15,20 @@ class Prodreviews extends Migration
             ],
             'user_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
             'prod_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
             'comment' => [
                 'type' => 'TEXT',
             ],
             'rating' => [
                 'type' => 'INT',
-                'constraint' => 1,
+				'constraint' => 1,
             ],
         ]);
         $this->forge->addKey('id', true);

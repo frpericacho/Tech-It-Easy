@@ -11,22 +11,24 @@ class Usercart extends Migration
         $this->forge->addField([
             'shoppingcart_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
             'prod_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
         ]);
         $this->forge->addForeignKey('shoppingcart_id', 'shoppingcart', 'id', 'CASCADE', 'SET NULL');
         $this->forge->addForeignKey('prod_id', 'product', 'id', 'CASCADE', 'SET NULL');
-        $this->forge->createTable('shoppingcart');
+        $this->forge->createTable('usercart');
     }
 
     //--------------------------------------------------------------------
 
     public function down()
     {
-        $this->forge->dropTable('shoppingcart');
+        $this->forge->dropTable('usercart');
     }
 }

@@ -15,11 +15,13 @@ class Sellerreviews extends Migration
             ],
             'user_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
             'seller_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
             'comment' => [
                 'type' => 'TEXT',
@@ -33,13 +35,13 @@ class Sellerreviews extends Migration
         $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'SET NULL');
         $this->forge->addForeignKey('seller_id', 'users', 'id', 'CASCADE', 'SET NULL');
         $this->forge->addForeignKey('rating', 'ratings', 'rating', 'CASCADE', 'NOT ACTION');
-        $this->forge->createTable('prodreviews');
+        $this->forge->createTable('sellerreviews');
     }
 
     //--------------------------------------------------------------------
 
     public function down()
     {
-        $this->forge->dropTable('prodreviews');
+        $this->forge->dropTable('sellerreviews');
     }
 }

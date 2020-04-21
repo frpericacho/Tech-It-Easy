@@ -12,15 +12,17 @@ class Lists extends Migration
             'id' => [
                 'type' => 'INT',
                 'constraint' => 9,
-                'auto_increment' => true,
+				'auto_increment' => true,
             ],
             'user_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
             'prod_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+				'constraint' => 9,
+				'null' => true,
             ],
             'price' => [
                 'type' => 'DECIMAL',
@@ -38,13 +40,13 @@ class Lists extends Migration
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('user_id', 'users', 'id', 'CASCADE', 'SET NULL');
         $this->forge->addForeignKey('prod_id', 'product', 'id', 'CASCADE', 'SET NULL');
-        $this->forge->createTable('orderitems');
+        $this->forge->createTable('lists');
     }
 
     //--------------------------------------------------------------------
 
     public function down()
     {
-        $this->forge->dropTable('orderitems');
+        $this->forge->dropTable('lists');
     }
 }
