@@ -1,29 +1,31 @@
-<?php namespace App\Database\Migrations;
+<?php
+
+namespace App\Database\Migrations;
 
 use CodeIgniter\Database\Migration;
 
 class Address extends Migration
 {
-	public function up()
-	{
-		$this->forge->addField([
+    public function up()
+    {
+        $this->forge->addField([
             'id' => [
                 'type' => 'INT',
                 'constraint' => 9,
-			],
-			'Num' => [
+            ],
+            'Num' => [
                 'type' => 'INT',
                 'constraint' => '9',
             ],
             'name' => [
                 'type' => 'VARCHAR',
                 'constraint' => '100',
-			],
-			'type' => [
+            ],
+            'type' => [
                 'type' => 'VARCHAR',
                 'constraint' => '10',
-			],
-			'postal_code' => [
+            ],
+            'postal_code' => [
                 'type' => 'VARCHAR',
                 'constraint' => '6',
             ],
@@ -34,20 +36,20 @@ class Address extends Migration
             'province' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
-			],
-			'province' => [
+            ],
+            'province' => [
                 'type' => 'VARCHAR',
                 'constraint' => '3',
-            ]
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->createTable('address');
-	}
+    }
 
-	//--------------------------------------------------------------------
+    //--------------------------------------------------------------------
 
-	public function down()
-	{
-		$this->forge->dropTable('address');
-	}
+    public function down()
+    {
+        $this->forge->dropTable('address');
+    }
 }
