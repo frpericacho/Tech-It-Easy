@@ -16,8 +16,9 @@ class Lists extends Migration
             ],
             'user_id' => [
                 'type' => 'INT',
-				'constraint' => 9,
-				'null' => true,
+				'constraint' => 11,
+                'null' => true,
+                'unsigned' => true,
             ],
             'prod_id' => [
                 'type' => 'INT',

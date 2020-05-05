@@ -15,13 +15,15 @@ class Sellerreviews extends Migration
             ],
             'user_id' => [
                 'type' => 'INT',
-				'constraint' => 9,
-				'null' => true,
+				'constraint' => 11,
+                'null' => true,
+                'unsigned' => true,
             ],
             'seller_id' => [
                 'type' => 'INT',
-				'constraint' => 9,
-				'null' => true,
+				'constraint' => 11,
+                'null' => true,
+                'unsigned' => true,
             ],
             'comment' => [
                 'type' => 'TEXT',

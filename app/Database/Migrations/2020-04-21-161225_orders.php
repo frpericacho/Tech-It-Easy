@@ -16,7 +16,8 @@ class Orders extends Migration
             ],
             'user_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+                'constraint' => 11,
+                'unsigned' => true,
             ],
             'order_date' => [
                 'type' => 'DATETIME',

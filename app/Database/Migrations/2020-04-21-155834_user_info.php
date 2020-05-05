@@ -11,8 +11,9 @@ class UserInfo extends Migration
         $this->forge->addField([
             'user_id' => [
                 'type' => 'INT',
-                'constraint' => 9,
+                'constraint' => 11,
                 'null' => true,
+                'unsigned' => true,
             ],
             'name' => [
                 'type' => 'VARCHAR',

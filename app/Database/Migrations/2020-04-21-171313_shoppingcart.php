@@ -16,8 +16,9 @@ class Shoppingcart extends Migration
             ],
             'user_id' => [
                 'type' => 'INT',
-				'constraint' => 9,
-				'null' => true,
+				'constraint' => 11,
+                'null' => true,
+                'unsigned' => true,
             ],
         ]);
         $this->forge->addKey('id', true);
