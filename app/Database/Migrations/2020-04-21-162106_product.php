@@ -23,6 +23,18 @@ class Product extends Migration
                 'constraint' => 9,
                 'null' => true,
             ],
+            'price' => [
+                'type' => 'FLOAT',
+                'constraint' => 9,
+                'null' => true,
+            ],
+            'description' => [
+                'type' => 'TEXT',
+            ],
+            'image' => [
+                'type' => 'VARCHAR',
+                'constraint' => 150,
+            ],
         ]);
         $this->forge->addKey('id', true);
         $this->forge->addForeignKey('department', 'department', 'id', 'SET NULL', 'CASCADE');
